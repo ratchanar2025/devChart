@@ -100,9 +100,13 @@ export default function PremiumTaskCard({ task, onTaskUpdate }: Props) {
       </p>
 
       {/* Priority Badge */}
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center justify-between gap-2 mb-3">
         <span className={`text-xs font-medium px-2 py-1 rounded-full ${priorityInfo.bg} ${priorityInfo.text}`}>
           {priorityInfo.label}
+        </span>
+        {/* Render the coins reward payload values from your database schema */}
+        <span className="text-xs text-amber-400 font-mono flex items-center gap-1 bg-amber-400/5 px-2 py-1 rounded-md border border-amber-400/10">
+          🪙 {task.rewardCoins || 10} Coins
         </span>
       </div>
 
