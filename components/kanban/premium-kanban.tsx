@@ -72,7 +72,7 @@ export default function PremiumKanbanBoard() {
 
       if (authToken) {
         headers['Authorization'] = `Bearer ${authToken}`;
-      }
+      }git
 
       const response = await fetch('/api/tasks', { headers });
 
